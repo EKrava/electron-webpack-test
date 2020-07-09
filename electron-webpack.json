@@ -1,0 +1,18 @@
+//"electronWebpack": {
+//  "commonSourceDirectory": "src/common",
+//  "staticSourceDirectory": "src/static",
+//  "title": true,
+{
+  "main": {
+//    "extraEntries": ["@/preload.js"],
+//    "sourceDirectory": "src/main",
+    "webpackConfig": "webpack.main.additions.js"
+  },
+
+  "renderer": {
+//    "sourceDirectory": "src/renderer",
+//    "template": "src/renderer/index.html",
+    "webpackConfig": "webpack.renderer.additions.js"
+//    "webpackDllConfig": "custom.webpackDll.additions.js"
+  }
+}

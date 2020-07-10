@@ -18,8 +18,11 @@
     "date-fns": "^1.28.5",
     "file-loader": "2.x",
     "html-webpack-plugin": "^3.2.0",
-    "polymer-webpack-loader": "../",
-    "webpack": "4.x",
+    "polymer-webpack-loader": "3.0.0-4",
+    "electron": "8.2.4",
+    "electron-builder": "^22.4.1",
+    "electron-webpack": "^2.8.2",
+    "webpack": "~4.42.1",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "3.x"
   }

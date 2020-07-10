@@ -32,6 +32,7 @@ module.exports = {
             },
             // Optionally exclude node_modules from transpilation except for polymer-webpack-loader:
             // exclude: /node_modules\/(?!polymer-webpack-loader\/).*/
+//	   exclude: /node_modules\/(?!polymer-webpack-loader\/).*/
           },
           { loader: 'polymer-webpack-loader' },
         ],

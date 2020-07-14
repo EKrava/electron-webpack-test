@@ -1,5 +1,8 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import format from 'date-fns/format';
+var css = require('./my.styl'); 
+import img from './images/hand-waving.png';
+
 
 class MyElement extends PolymerElement {
   static get is() { return 'my-element'; }
@@ -15,6 +18,7 @@ class MyElement extends PolymerElement {
   }
   static get template() {
     return html`
+
 <h1>
   Hello, World! It's [[today]].
 </h1>

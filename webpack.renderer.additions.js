@@ -1,25 +1,15 @@
 // var stylus_plugin = require('stylus_plugin');
 const path = require('path');
+//var stylus_plugin = require('stylus_plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   module: {
     rules: [
-      {         
-       test: /\.png$/i,
-       use: [
-        {
-         loader: 'file-loader',
-         options: {
-         name: 'images/[name]-[hash].[ext]',
-         }, 
-        },
-       ],
-      },
       {
         // If you see a file that ends in .html, send it to these loaders.
-        test: /\.html$/,
+        test: /\.js$/,
         // This is an example of chained loaders in Webpack.
         // Chained loaders run last to first. So it will run
         // polymer-webpack-loader, and hand the output to
@@ -35,10 +25,26 @@ module.exports = {
 //	   exclude: /node_modules\/(?!polymer-webpack-loader\/).*/
           },
           { loader: 'polymer-webpack-loader' },
+
         ],
       },
-    ],
-   },
+
+     { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' },
+      {         
+       test: /\.png$/i,
+       use: [
+        {
+         loader: 'file-loader',
+         options: {
+         name: 'img/[name]-[hash].[ext]',
+         }, 
+        },
+       ],
+      },
+
+     
+  ], 
+},
 
  plugins: [
    new HtmlWebpackPlugin({
@@ -51,6 +57,8 @@ module.exports = {
       from: path.resolve(__dirname, 'node_modules/@webcomponents/webcomponentsjs/*.js'),
       to: 'node_modules/@webcomponents/webcomponentsjs/[name].[ext]',
     }]),
+
     ],
+
 }
 

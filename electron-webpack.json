@@ -6,7 +6,7 @@
   "main": {
 //    "extraEntries": ["@/preload.js"],
 //    "sourceDirectory": "src/main",
-    "webpackConfig": "webpack.main.additions.js"
+//    "webpackConfig": "webpack.main.additions.js"
   },
 
   "renderer": {
